@@ -1,4 +1,4 @@
-i# 🚀 Reto GitOps - Día 2/10: GitHub Actions + Helm + ArgoCD
+# 🚀 Reto GitOps - Día 2/10: GitHub Actions + Helm + ArgoCD
 
 > **Pipeline GitOps moderno con CI desacoplado del CD utilizando GitHub Actions, Helm y ArgoCD sobre Kubernetes.**
 
