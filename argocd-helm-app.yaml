@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-gitops-helm
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/ssh-javi/02-infra-repo.git' # 👈 Tu repo de infraestructura
+    targetRevision: HEAD
+    path: charts/nginx-app # La ruta exacta donde está el Chart.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: prod-helm-env # Namespace de destino para la app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

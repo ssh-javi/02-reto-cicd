@@ -1,0 +1,6 @@
+[submodule "app-repo"]
+	path = app-repo
+	url = https://github.com/ssh-javi/02-app-repo.git
+[submodule "infra-repo"]
+	path = infra-repo
+	url = https://github.com/ssh-javi/02-infra-repo.git
